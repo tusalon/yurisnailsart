@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Nailsainuy
+// sw.js - Service Worker para Yuri’s Nails Art
 
-const CACHE_NAME = 'nailsainuy-v1';
+const CACHE_NAME = 'yuris-nails-art-v1';
 const urlsToCache = [
-  '/nailsainuy/',
-  '/nailsainuy/index.html',
-  '/nailsainuy/admin.html',
-  '/nailsainuy/admin-login.html',
-  '/nailsainuy/setup-wizard.html',
-  '/nailsainuy/editar-negocio.html',
-  '/nailsainuy/manifest.json',
-  '/nailsainuy/icons/icon-72x72.png',
-  '/nailsainuy/icons/icon-96x96.png',
-  '/nailsainuy/icons/icon-128x128.png',
-  '/nailsainuy/icons/icon-144x144.png',
-  '/nailsainuy/icons/icon-152x152.png',
-  '/nailsainuy/icons/icon-192x192.png',
-  '/nailsainuy/icons/icon-384x384.png',
-  '/nailsainuy/icons/icon-512x512.png'
+  '/yuris-nails-art/',
+  '/yuris-nails-art/index.html',
+  '/yuris-nails-art/admin.html',
+  '/yuris-nails-art/admin-login.html',
+  '/yuris-nails-art/setup-wizard.html',
+  '/yuris-nails-art/editar-negocio.html',
+  '/yuris-nails-art/manifest.json',
+  '/yuris-nails-art/icons/icon-72x72.png',
+  '/yuris-nails-art/icons/icon-96x96.png',
+  '/yuris-nails-art/icons/icon-128x128.png',
+  '/yuris-nails-art/icons/icon-144x144.png',
+  '/yuris-nails-art/icons/icon-152x152.png',
+  '/yuris-nails-art/icons/icon-192x192.png',
+  '/yuris-nails-art/icons/icon-384x384.png',
+  '/yuris-nails-art/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/nailsainuy/icons/icon-192x192.png');
+            return caches.match('/yuris-nails-art/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Nailsainuy');
+console.log('✅ Service Worker configurado para Yuri’s Nails Art');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);

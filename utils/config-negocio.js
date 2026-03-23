@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: Nailsainuy
+// CLIENTE: Yuri’s Nails Art
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = '445877af-391b-4d6a-a695-5f7d30efc754'; // ID de Nailsainuy
+const NEGOCIO_ID_POR_DEFECTO = 'd1947242-f976-4851-9a33-c19fdd74cf95'; // ID de Yuri’s Nails Art
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'Nailsainuy';
+    return config?.nombre || 'Yuri’s Nails Art';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '59308941';
+    return config?.telefono || '58275511';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || 'tamarityunia@imail.com';
+    return config?.email || 'Yurimasanzguerra@gmail.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a Nailsainuy!';
+    return config?.mensaje_bienvenida || '¡Bienvenida a Yuri’s Nails Art!';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'nailsainuy';
+    return config?.ntfy_topic || 'yuris-nails-art';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para Nailsainuy');
+console.log('✅ config-negocio.js listo para Yuri’s Nails Art');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);
